@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #2e2e2e);
+    color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: backgroundAnimation 15s infinite alternate;
+    position: relative;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #1f1f1f, #2e2e2e); }
+    50% { background: linear-gradient(135deg, #2e2e2e, #3f3f3f); }
+    100% { background: linear-gradient(135deg, #1f1f1f, #2e2e2e); }
+}
+
+h1 {
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+    margin-right: 20px; /* Added space between input and button */
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f9f9f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 10px #ff6f61;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65a50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 300px;
+}
+
+li {
+    padding: 10px;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: translateX(0);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.delete {
+    padding: 5px 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #e65a50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Star Falling Animation */
+@keyframes fall {
+    0% { opacity: 1; transform: translateY(-1000px) rotate(0deg); }
+    100% { opacity: 0; transform: translateY(1000px) rotate(360deg); }
+}
+
+.star {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+.star:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+.star:nth-child(2) {
+    left: 20%;
+    animation-duration: 7s;
+    animation-delay: 3s;
+}
+.star:nth-child(3) {
+    left: 30%;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+.star:nth-child(4) {
+    left: 40%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+.star:nth-child(5) {
+    left: 50%;
+    animation-duration: 8s;
+    animation-delay: 5s;
+}
+.star:nth-child(6) {
+    left: 60%;
+    animation-duration: 6s;
+    animation-delay: 6s;
+}
+.star:nth-child(7) {
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+.star:nth-child(8) {
+    left: 80%;
+    animation-duration: 7s;
+    animation-delay: 3s;
+}
+.star:nth-child(9) {
+    left: 90%;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+.star:nth-child(10) {
+    left: 100%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
